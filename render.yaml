@@ -1,6 +1,6 @@
 databases:
-  - name: chart-view
-    databaseName: chart-view
+  - name: chart_view
+    databaseName: chart_view
     user: shishimai805
     region: singapore
     plan: free
@@ -18,7 +18,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: chart-view
+          name: chart_view
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
