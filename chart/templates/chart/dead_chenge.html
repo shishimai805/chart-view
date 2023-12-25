@@ -1,0 +1,30 @@
+{% extends 'chart/main.html' %}
+{% load static %}
+{% block content %}
+
+<h3>Dead_chenge</h3>
+    <div class="chart-context" id="test"> 
+        <img id="chart-graph">
+    </div>
+    <div class="d-flex justify-content-between">
+        {% if code == f_code %} 
+            <span></span>
+        {% else %}
+            <input type="button" class="btn btn-dark" id="prev_btn" value="Back" onclick="clickBack()" />
+        {% endif %}
+        {% if code == l_code %} 
+            <span></span>
+        {% else %}
+            <input type="button" class="btn btn-dark" id="next_btn" value="Next" onclick="clickNext()" />
+        {% endif %}
+    </div>
+<script type="text/javascript">
+    document.getElementById("chart-graph").src = "{% static 'images/chart_graph/Dead_cross/転換/'|add:code %}";
+    function clickNext(){
+        document.location.href = "{% url 'Dead_chenge' index|add:1 %}";
+    }
+    function clickBack(){
+        document.location.href = "{% url 'Dead_chenge' index|add:-1 %}";
+    }
+</script>
+{% endblock content %}

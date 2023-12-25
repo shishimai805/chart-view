@@ -1,0 +1,25 @@
+{% extends 'chart/main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<h3>Chart Type</h3>
+    <div id="folder-icon">
+        <div class="folder">
+            <a href="{% url 'Golden_row' 1 %}"><img id="icon-picture" src="{% static 'images/folder.png' %}"></a>
+            <p style="text-align:center" class="icon-letter">Golden_row</p>
+        </div>
+        <div class="folder">
+            <a href="{% url 'Golden_chenge' 1 %}"><img id="icon-picture" src="{% static 'images/folder.png' %}"></a>
+            <p style="text-align:center" class="icon-letter">Golden_chenge</p>
+        </div>
+        <div class="folder">
+            <a href="{% url 'Dead_row' 1 %}"><img id="icon-picture" src="{% static 'images/folder.png' %}"></a>
+            <p style="text-align:center" class="icon-letter">Dead_row</p>
+        </div>
+        <div class="folder">
+            <a href="{% url 'Dead_chenge' 1 %}"><img id="icon-picture" src="{% static 'images/folder.png' %}"></a>
+            <p style="text-align:center" class="icon-letter">Dead_chenge</p>
+        </div>
+    </div>
+{% endblock content %}
