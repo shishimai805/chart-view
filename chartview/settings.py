@@ -30,7 +30,7 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = 'django-insecure-wvm1&qg=4w0dwb(dv_z9a+)i_cc@c@ow=yed!_@8sz4he5*vkq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'chart-view.onrender.com']
 
