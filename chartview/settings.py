@@ -30,10 +30,6 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = 'django-insecure-wvm1&qg=4w0dwb(dv_z9a+)i_cc@c@ow=yed!_@8sz4he5*vkq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
-#DEBUG = False
-=======
->>>>>>> refs/remotes/origin/main
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'chart-view.onrender.com']
@@ -128,14 +124,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-<<<<<<< HEAD
-STATIC_URL = 'static/'
-STATICFILES_DIRS = ((os.path.join(BASE_DIR, 'static')), )
+#STATIC_URL = 'static/'
+#STATICFILES_DIRS = ((os.path.join(BASE_DIR, 'static')), )
 #render用↓
 #STATIC_URL = "static/"
 #STATIC_ROOT = str(BASE_DIR / "staticfiles")
 #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-=======
 #STATIC_URL = 'static/'
 #パターンA
 #STATIC_URL = "static/"
@@ -147,7 +141,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
->>>>>>> refs/remotes/origin/main
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
