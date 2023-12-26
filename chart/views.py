@@ -71,6 +71,15 @@ def dead_chenge(request,index):
 
 def do_graph(request):
     if request.method == 'GET':
+        global codes_gr,codes_gc,codes_dr,codes_dc
+        codes_gr = os.listdir("static/images/chart_graph/Golden_cross/継続")
+        codes_gr.sort()
+        codes_gc = os.listdir("static/images/chart_graph/Golden_cross/転換")
+        codes_gc.sort()
+        codes_dr = os.listdir("static/images/chart_graph/Dead_cross/継続")
+        codes_dr.sort()
+        codes_dc = os.listdir("static/images/chart_graph/Dead_cross/転換")
+        codes_dc.sort()
         context = {}
         # write_data.pyのwrite_csv()メソッドを呼び出す。
         # ajaxで送信したデータのうち"input_data"を指定して取得する。
