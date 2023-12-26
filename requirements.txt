@@ -2,6 +2,7 @@ dj_database_url==2.1.0
 Django==4.2.5
 django_environ==0.11.2
 environ==1.0
+gunicorn==21.2.0
 matplotlib==3.7.2
 mplfinance==0.12.9b7
 oauth2client==4.1.3
