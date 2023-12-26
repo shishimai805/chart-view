@@ -172,8 +172,8 @@ def graph(num:str,j:int):
                     fname = "継続"
                 # ゴールデンクロス
                 print("Golden")
-                mpf.plot(df, type='candle', volume=True, addplot=add_plot, volume_panel=3, title=num+"hour", style='nightclouds',savefig='/Users/leomiyagi/chartview/static/images/chart_graph/{}/{}/{}.png'.format(style,fname,num))
-                img = cv2.cvtColor(cv2.imread("/Users/leomiyagi/chartview/static/images/chart_graph/{}/{}/{}.png".format(style,fname,num)), cv2.COLOR_BGR2RGB)
+                mpf.plot(df, type='candle', volume=True, addplot=add_plot, volume_panel=3, title=num+"hour", style='nightclouds',savefig='/static/images/chart_graph/{}/{}/{}.png'.format(style,fname,num))
+                img = cv2.cvtColor(cv2.imread("/static/images/chart_graph/{}/{}/{}.png".format(style,fname,num)), cv2.COLOR_BGR2RGB)
                 plt.subplot(121),plt.imshow(img)
                 plt.xticks([]), plt.yticks([])
                 graph(num,1)
@@ -188,18 +188,18 @@ def graph(num:str,j:int):
                     fname = "継続"
                 # デッドクロス
                 print("Dead")
-                mpf.plot(df, type='candle', volume=True, addplot=add_plot, volume_panel=3, title=num+"hour", style='nightclouds',savefig='/Users/leomiyagi/chartview/static/images/chart_graph/{}/{}/{}.png'.format(style,fname,num))
-                img = cv2.cvtColor(cv2.imread("/Users/leomiyagi/chartview/static/images/chart_graph/{}/{}/{}.png".format(style,fname,num)), cv2.COLOR_BGR2RGB)
+                mpf.plot(df, type='candle', volume=True, addplot=add_plot, volume_panel=3, title=num+"hour", style='nightclouds',savefig='/static/images/chart_graph/{}/{}/{}.png'.format(style,fname,num))
+                img = cv2.cvtColor(cv2.imread("/static/images/chart_graph/{}/{}/{}.png".format(style,fname,num)), cv2.COLOR_BGR2RGB)
                 plt.subplot(121),plt.imshow(img)
                 plt.xticks([]), plt.yticks([])
                 graph(num,1)
 
         if j == 1:
-            mpf.plot(df, type='candle', volume=True, addplot=add_plot, volume_panel=3, title=num+"day", style='nightclouds',savefig='/Users/leomiyagi/chartview/static/images/chart_graph/{}/{}/{}.png'.format(style,fname,num))
-            img = cv2.cvtColor(cv2.imread("/Users/leomiyagi/chartview/static/images/chart_graph/{}/{}/{}.png".format(style,fname,num)), cv2.COLOR_BGR2RGB)
+            mpf.plot(df, type='candle', volume=True, addplot=add_plot, volume_panel=3, title=num+"day", style='nightclouds',savefig='/static/images/chart_graph/{}/{}/{}.png'.format(style,fname,num))
+            img = cv2.cvtColor(cv2.imread("/static/images/chart_graph/{}/{}/{}.png".format(style,fname,num)), cv2.COLOR_BGR2RGB)
             plt.subplot(122),plt.imshow(img)
             plt.xticks([]), plt.yticks([])
-            fig.savefig("/Users/leomiyagi/chartview/static/images/chart_graph/{}/{}/{}.png".format(style,fname,num),dpi=500, bbox_inches='tight', pad_inches=0)
+            fig.savefig("/static/images/chart_graph/{}/{}/{}.png".format(style,fname,num),dpi=500, bbox_inches='tight', pad_inches=0)
             print("complete")
                 
     except:
@@ -210,7 +210,7 @@ def do_graph():
     fig = plt.figure()
     for i in ["Golden_cross","Dead_cross"]:
         for j in ["転換","継続"]:
-            path = f"/Users/leomiyagi/chartview/static/images/chart_graph/{i}/{j}/"
+            path = f"/static/images/chart_graph/{i}/{j}/"
             if os.path.exists(path):
                 shutil.rmtree(path)
                 os.mkdir(path)
