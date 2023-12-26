@@ -12,4 +12,3 @@ python-decouple==3.8
 selenium==4.16.0
 webdriver_manager==4.0.0
 yahoo_finance_api2==0.0.12
-~atplotlib==3.6.2
