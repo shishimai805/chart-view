@@ -48,8 +48,7 @@ def search():
     url = "https://jp.kabumap.com/servlets/kabumap/Action?SRC=easyScrn/base"
     #driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager(version='119.0.6045.105').install()),options=options)
     #driver = webdriver.Chrome(options=options)
-    driver_path = ChromeDriverManager().install()
-    driver = webdriver.Chrome(service=Service(executable_path=driver_path),options=options)
+    driver = webdriver.Chrome(service=Service(executable_path=os.path.join(BASE_DIR,"static/driver/chromedriver"),options=options))
     driver.set_window_size(1400, 980)
     driver.get(url)
 
