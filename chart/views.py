@@ -6,26 +6,27 @@ from .application import stuck_graph
 
 import glob
 import os
+from chartview.settings import BASE_DIR
 
-codes_gr = os.listdir("static/images/chart_graph/Golden_cross/継続")
+codes_gr = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Golden_cross/継続"))
 codes_gr.sort()
-codes_gc = os.listdir("static/images/chart_graph/Golden_cross/転換")
+codes_gc = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Golden_cross/転換"))
 codes_gc.sort()
-codes_dr = os.listdir("static/images/chart_graph/Dead_cross/継続")
+codes_dr = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Dead_cross/継続"))
 codes_dr.sort()
-codes_dc = os.listdir("static/images/chart_graph/Dead_cross/転換")
+codes_dc = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Dead_cross/転換"))
 codes_dc.sort()
 
 # Create your views here.
 def home(request):
     global codes_gr,codes_gc,codes_dr,codes_dc
-    codes_gr = os.listdir("static/images/chart_graph/Golden_cross/継続")
+    codes_gr = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Golden_cross/継続"))
     codes_gr.sort()
-    codes_gc = os.listdir("static/images/chart_graph/Golden_cross/転換")
+    codes_gc = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Golden_cross/転換"))
     codes_gc.sort()
-    codes_dr = os.listdir("static/images/chart_graph/Dead_cross/継続")
+    codes_dr = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Dead_cross/継続"))
     codes_dr.sort()
-    codes_dc = os.listdir("static/images/chart_graph/Dead_cross/転換")
+    codes_dc = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Dead_cross/転換"))
     codes_dc.sort()
     #for code in codes:
         #post = Code.objects.create(num=code.replace(".png",""), image=f"static/images/chart_graph/Golden_cross/転換/{code}")
@@ -72,13 +73,13 @@ def dead_chenge(request,index):
 def do_graph(request):
     if request.method == 'GET':
         global codes_gr,codes_gc,codes_dr,codes_dc
-        codes_gr = os.listdir("static/images/chart_graph/Golden_cross/継続")
+        codes_gr = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Golden_cross/継続"))
         codes_gr.sort()
-        codes_gc = os.listdir("static/images/chart_graph/Golden_cross/転換")
+        codes_gc = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Golden_cross/転換"))
         codes_gc.sort()
-        codes_dr = os.listdir("static/images/chart_graph/Dead_cross/継続")
+        codes_dr = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Dead_cross/継続"))
         codes_dr.sort()
-        codes_dc = os.listdir("static/images/chart_graph/Dead_cross/転換")
+        codes_dc = os.listdir(os.path.join(BASE_DIR,"static/images/chart_graph/Dead_cross/転換"))
         codes_dc.sort()
         context = {}
         # write_data.pyのwrite_csv()メソッドを呼び出す。
